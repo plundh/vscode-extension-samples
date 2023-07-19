@@ -34,6 +34,7 @@ let hasDiagnosticRelatedInformationCapability = false;
 
 connection.onInitialize((params: InitializeParams) => {
 	const capabilities = params.capabilities;
+	console.log('Initializing ...');
 
 	// Does the client support the `workspace/configuration` request?
 	// If not, we fall back using global settings.
@@ -78,6 +79,7 @@ connection.onInitialized(() => {
 			connection.console.log('Workspace folder change event received.');
 		});
 	}
+	console.log('Server initialized');
 });
 
 // The example settings
